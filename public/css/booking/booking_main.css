@@ -1,0 +1,359 @@
+ .floatingHeader {
+   position: fixed;
+   top: 40px;
+   visibility: hidden;
+   background-color: #fff;
+   border-bottom: 2px solid #E4205C;
+ }
+
+ #booking_list_wrap {
+   position: absolute;
+   z-index: 10;
+   background-color: #FFF;
+   color: #345;
+
+   padding: 10px;
+
+   border: 1px #ececec solid;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+
+   top: 42px;
+   right: 20px;
+   box-shadow: 5px 5px 5px #888888;
+   min-height: 40px;
+ }
+
+
+ .alert-booking-created {
+   position: fixed;
+   z-index: 3999;
+   width: 520px;
+   padding: 10px;
+   height: 60px;
+   overflow: show;
+   margin: auto;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+ }
+
+ /*booking hover background*/
+ .hover-bg {
+   background-color: #FFFF00 !important;
+ }
+
+ /*New Booking Modal*/
+ #booking-modal .tabs-left, .tabs-right {
+   border-bottom: none;
+   padding-top: 2px;
+ }
+
+ #booking-modal .tabs-left {
+   border-right: 1px solid #ddd;
+ }
+
+ #booking-modal .tabs-right {
+   border-left: 1px solid #ddd;
+ }
+
+ #booking-modal .tabs-left>li, .tabs-right>li {
+   float: none;
+   margin-bottom: 2px;
+ }
+
+ #booking-modal .tabs-left>li {
+   margin-right: -1px;
+ }
+
+ #booking-modal .tabs-right>li {
+   margin-left: -1px;
+ }
+
+ #booking-modal .tabs-left>li.active>a,
+ #booking-modal .tabs-left>li.active>a:hover,
+ #booking-modal .tabs-left>li.active>a:focus {
+   border-bottom-color: #ddd;
+   border-right-color: transparent;
+ }
+
+ #booking-modal .tabs-right>li.active>a,
+ #booking-modal .tabs-right>li.active>a:hover,
+ #booking-modal .tabs-right>li.active>a:focus {
+   border-bottom: 1px solid #ddd;
+   border-left-color: transparent;
+ }
+
+ #booking-modal .tabs-left>li>a {
+   border-radius: 4px 0 0 4px;
+   margin-right: 0;
+   display: block;
+ }
+
+ #booking-modal .tabs-right>li>a {
+   border-radius: 0 4px 4px 0;
+   margin-right: 0;
+ }
+
+ #booking-modal .vertical-text {
+   margin-top: 50px;
+   border: none;
+   position: relative;
+ }
+
+ #booking-modal .vertical-text>li {
+   height: 20px;
+   width: 120px;
+   margin-bottom: 100px;
+ }
+
+ #booking-modal .vertical-text>li>a {
+   border-bottom: 1px solid #ddd;
+   border-right-color: transparent;
+   text-align: center;
+   border-radius: 4px 4px 0px 0px;
+ }
+
+ #booking-modal .vertical-text>li.active>a,
+ #booking-modal .vertical-text>li.active>a:hover,
+ #booking-modal .vertical-text>li.active>a:focus {
+   border-bottom-color: transparent;
+   border-right-color: #ddd;
+   border-left-color: #ddd;
+ }
+
+ #booking-modal .vertical-text.tabs-left {
+   left: -50px;
+ }
+
+ #booking-modal .vertical-text.tabs-right {
+   right: -50px;
+ }
+
+ #booking-modal .vertical-text.tabs-right>li {
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   transform: rotate(90deg);
+ }
+
+ #booking-modal .vertical-text.tabs-left>li {
+   -webkit-transform: rotate(-90deg);
+   -moz-transform: rotate(-90deg);
+   -ms-transform: rotate(-90deg);
+   -o-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+ }
+
+ #booking-modal .modal-header {
+   border-bottom: 0px;
+ }
+
+ /*New Booking Modal*/
+ .check-in-time-wrapper,
+ .check-out-time-wrapper {
+   display: none;
+ }
+
+ .hourly-booking-enabled .check-in-date-wrapper,
+ .hourly-booking-enabled .check-out-date-wrapper {
+   width: 60%;
+   display: inline;
+   border-radius: 4px 0px 0px 4px;
+ }
+
+ .hourly-booking-enabled .check-in-time-wrapper,
+ .hourly-booking-enabled .check-out-time-wrapper {
+   display: block;
+   width: 40%;
+   float: right;
+   border-left: none;
+   border-radius: 0px 4px 4px 0px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background-position: right 50%;
+   background-repeat: no-repeat;
+   background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1"><path d="M4 8L0 4h8z"/></svg>');
+   padding: .5em;
+   padding-right: 1.5em
+ }
+
+ .form-group.input-group>.check-out-date-wrapper {
+   width: 77%;
+ }
+
+ .form-group.input-group>.check-out-time-wrapper {
+   display: none;
+ }
+
+ .hourly-booking-enabled.form-group.input-group>.check-out-date-wrapper {
+   width: 50%;
+ }
+
+ .hourly-booking-enabled.form-group.input-group>.check-out-time-wrapper {
+   width: 27%;
+   display: block;
+ }
+
+
+ .base-timer {
+   position: relative;
+   height: 80px;
+   width: 80px;
+   margin: auto;
+ }
+
+ /* Removes SVG styling that would hide the time label */
+ .base-timer__circle {
+   fill: none;
+   stroke: none;
+ }
+
+ /* The SVG path that displays the timer's progress */
+ .base-timer__path-elapsed {
+   stroke-width: 5px;
+   stroke: lightgray;
+ }
+
+ .base-timer__label {
+   position: absolute;
+
+   /* Size should match the parent container */
+   width: 80px;
+   height: 80px;
+
+   /* Keep the label aligned to the top */
+   top: 0;
+
+   /* Create a flexible box that centers content vertically and horizontally */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   /* Sort of an arbitrary number; adjust to your liking */
+   font-size: 20px;
+ }
+
+ .base-timer__path-remaining.green {
+   color: rgb(56, 154, 240);
+ }
+
+ .base-timer__path-remaining.orange {
+   color: orange;
+ }
+
+ .base-timer__path-remaining.red {
+   color: red;
+ }
+
+ .base-timer__path-remaining {
+   /* Just as thick as the original ring */
+   stroke-width: 5px;
+
+   /* Rounds the line endings to create a seamless circle */
+   stroke-linecap: round;
+
+   /* Makes sure the animation starts at the top of the circle */
+   transform: rotate(90deg);
+   transform-origin: center;
+
+   /* One second aligns with the speed of the countdown timer */
+   transition: 1s linear all;
+
+   /* Allows the ring to change color when the color value updates */
+   stroke: currentColor;
+ }
+
+ .base-timer__svg {
+   /* Flips the svg and makes the animation to move left-to-right */
+   transform: scaleX(-1);
+ }
+
+ .room-guests-icon {
+   position: absolute;
+   top: 5px;
+   left: 5px;
+ }
+
+ .room-status-icon {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+ }
+
+ .room-container-block {
+   width: 126px;
+   height: 148px;
+   position: relative;
+   background-image: linear-gradient(to bottom, #fff 0, #72e543 100%);
+   border: 1px solid #e0e0e0;
+   /* cursor: pointer;
+   text-align: center;
+   font-weight: 400;
+   line-height: 1.5;
+   border-radius: 0.25rem; */
+ }
+
+ .busy_room_bg {
+   background-image: linear-gradient(to bottom, #fff 0, #38b4e1 100%) !important;
+ }
+
+ .warning_room_bg {
+   background-image: linear-gradient(to bottom, #fff 0, #f5e203 100%) !important;
+ }
+
+ .danger_room_bg {
+   background-image: linear-gradient(to bottom, #fff 0, #ff7f00 100%) !important;
+ }
+
+ .rooms_container {
+   display: flex;
+   flex-wrap: wrap !important;
+   justify-content: center;
+ }
+
+ .room_name_type {
+   position: absolute;
+   bottom: 14px;
+   width: 100%;
+   left: 0;
+   padding: 4px 0px;
+ }
+
+ .room_name_type:hover {
+   width: 86%;
+   left: 8px;
+   border-radius: 50px;
+   border: solid 1px;
+ }
+
+ .room_name_type:active {
+   width: 86%;
+   left: 8px;
+   border-radius: 50px;
+   border: solid 1px;
+   box-shadow: 2px 2px 2px;
+ }
+
+ .room_name_type:hover .edit-icon {
+   width: 16px;
+   height: 16px;
+   margin-right: 1px;
+   background-image: url(../../images/edit.png);
+   position: absolute;
+   right: 2px;
+   top: 8px;
+   z-index: 9;
+   display: inline;
+ }
+
+
+.secondly_two_dot {
+  animation: secondly_two_dot_anim 1s linear infinite;
+}
+
+@keyframes secondly_two_dot_anim {  
+  50% { opacity: 0; }
+}
